@@ -958,11 +958,11 @@
           }
         }
       },
-      "System.ServiceModel.Http/4.7.0": {
+      "System.ServiceModel.Http/4.8.0": {
         "type": "package",
         "dependencies": {
-          "System.Private.ServiceModel": "4.7.0",
-          "System.ServiceModel.Primitives": "4.7.0"
+          "System.Private.ServiceModel": "4.8.0",
+          "System.ServiceModel.Primitives": "4.8.0"
         },
         "compile": {
           "ref/netstandard2.0/System.ServiceModel.Http.dll": {}
@@ -3460,13 +3460,14 @@
         "version.txt"
       ]
     },
-    "System.ServiceModel.Http/4.7.0": {
-      "sha512": "+BB61ycl1cSlRbJDpABoqMa7bRE4boJfK1CfWfbNzTGeADFVmDkhylpfmC1bKloxtf95p2owj8/n7kilgRBAow==",
+    "System.ServiceModel.Http/4.8.0": {
+      "sha512": "+kn7xCZjf/d02SE3OnwyU4wxggrxEhOoGLB+DUACSTXvSIGKZoHPXQ6LhkY0/m7nzdjqxmvc7cJO3UPWgIH/8Q==",
       "type": "package",
-      "path": "system.servicemodel.http/4.7.0",
+      "path": "system.servicemodel.http/4.8.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/MonoAndroid10/_._",
@@ -3503,7 +3504,7 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "system.servicemodel.http.4.7.0.nupkg.sha512",
+        "system.servicemodel.http.4.8.0.nupkg.sha512",
         "system.servicemodel.http.nuspec"
       ]
     },
@@ -4156,6 +4157,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "SoapCore >= 1.1.0.2",
+      "System.ServiceModel.Http >= 4.8.0",
       "System.ServiceModel.Primitives >= 4.8.0"
     ]
   },
@@ -4207,6 +4209,10 @@
           "SoapCore": {
             "target": "Package",
             "version": "[1.1.0.2, )"
+          },
+          "System.ServiceModel.Http": {
+            "target": "Package",
+            "version": "[4.8.0, )"
           },
           "System.ServiceModel.Primitives": {
             "target": "Package",
