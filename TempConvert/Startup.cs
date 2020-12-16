@@ -1,15 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using TempConvert.Interfaces;
+using TempConvert.Models;
+using TempConvert.Repositories;
 
 namespace TempConvert
 {
@@ -26,6 +22,13 @@ namespace TempConvert
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            // Configure your Temp client with values from appsettings.json
+            services.Configure<ClientConfig>(
+                Configuration.GetSection("TempConvert"));
+    
+            // Add singleton
+            services.AddSingleton<ITempConvertRepository, TempConvertRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
